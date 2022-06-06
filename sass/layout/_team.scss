@@ -1,0 +1,83 @@
+.team {
+   background-color: var(--filter-button-color);
+}
+
+.team__title {
+   @include title-font;
+   margin-bottom: 50px;
+}
+
+.team__list {
+   display: flex;
+   justify-content: center;
+}
+
+.social__list {
+   display: flex;
+   justify-content: center;
+}
+
+.team__foto {
+   display: block;
+}
+
+.team__card {
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+   margin-right: 30px;
+
+   &:last-child {
+      margin-right: 0;
+   }
+}
+
+.team__card-text {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: var(--white-theme);
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+.team__employee {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 1.19;
+   text-align: center;
+   letter-spacing: 0.03em;
+   margin-bottom: 10px;
+}
+
+.team__position {
+   font-size: 16px;
+   line-height: 1.19;
+   text-align: center;
+   letter-spacing: 0.03em;
+   color: var(--main-text-theme-paragraph);
+   margin-bottom: 16px;
+}
+
+.social__icon-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   color: var(--icon-main-color);
+   transition: var(--animations-link-color), var(--animations-link-bg);
+
+   &:hover,
+   &:focus {
+      color: var(--white-theme);
+      background-color: var(--hiperlink-and-active-theme);
+   }
+}
+
+.social__icon {
+   fill: currentColor;
+}
+
+.social__items:not(:last-child) {
+   margin-right: 10px;
+}
