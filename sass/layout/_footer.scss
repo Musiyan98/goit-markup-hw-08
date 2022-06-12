@@ -6,17 +6,54 @@
 
 .footer__container {
    display: flex;
-   align-items: baseline
+   @include mq (mobile) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+
+   @include mq (tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+   }
+
+   @include mq (desktop) {
+      text-align: start;
+   }
+
 }
 
 .footer__box {
-   &:not(:last-child) {
-   margin-right: 70px;
+   @include mq (mobile-only) {
+      &:not(:last-child) {
+         margin-bottom: 60px;
+         }
+      }
+
+   @include mq (tablet) {
+      &:first-child {
+         margin-right: 165px;
+         }
+      
+         &:last-child {
+            margin-top: 60px;
+         }
    }
 
-   &:last-child {
-      margin-left: auto;
+   @include mq (desktop) {
+
+   &:not(:last-child) {
+      margin-right: 70px;
+      }
+   
+      &:last-child {
+         margin-left: auto;
+         margin-top: 0;
+      }
    }
+
 }
 
 
@@ -102,9 +139,18 @@
 
 .subscribe-form {
    display: flex;
-   width: 570px;
+   
    margin-left: auto;
-   align-items: flex-end;
+   // align-items: flex-end;
+
+   @include mq (not-desktop) {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   @include mq (desktop) {
+      align-items: flex-end;
+   }
 }
 
 .subscribe-form__label {
@@ -121,6 +167,11 @@
    border-radius: 4px;
    padding: 15px 16px;
    color: var(--white-theme);
+
+   @include mq (not-desktop) {
+      width: 450px;
+      margin-bottom: 20px;
+   }
 
    &:focus-visible {
       outline-offset: -2px;
@@ -150,6 +201,9 @@
    letter-spacing: 0.06em;
 
    color: var(--white-theme);
+
+   @include mq (desktop) {
+   }
 }
 
 .subscribe-form__icon {

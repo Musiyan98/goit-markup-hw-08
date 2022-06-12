@@ -1,4 +1,11 @@
+.project__section {
+   display: none;
+   padding-top: 0;
 
+   @include mq (desktop) {
+      display: flex;
+   }
+}
 
 .project-title {
    @include title-font;

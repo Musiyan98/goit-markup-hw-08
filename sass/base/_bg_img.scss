@@ -1,0 +1,89 @@
+.hero {
+   background-color: var(--dark-background);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+
+   // |============================| Завантаження звичайного фонового зображення для мобільної версії |============================*/ 
+
+   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                     url(../images/mobile/background/bg.jpg),;
+   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                     -webkit-image-set(url(../images/mobile/background/bg.webp) 1x),;
+
+   // Завантаження ретінізованого 2х фонового зображення
+   @include mq(retina2x) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                        url(../images/mobile/background/bg@2x.jpg),;
+
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                        -webkit-image-set(url(../images/mobile/background/bg@2x.webp) 2x),;
+   }
+
+   @include mq(retina3x) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                        url(../images/mobile/background/bg@3x.jpg),;
+
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                        -webkit-image-set(url(../images/mobile/background/bg@3x.webp) 3x),;
+   }
+
+   /**
+   |============================
+   | Завантаження звичайного фонового зображення для планшету
+   |============================
+*/
+   @include mq(tablet) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                        url(../images/tablet/background/bg.jpg),;
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                        -webkit-image-set(url(../images/tablet/background/bg.webp) 1x),;
+   
+      // Завантаження ретінізованого 2х фонового зображення
+      @include mq(retina2x) {
+         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                           url(../images/tablet/background/bg@2x.jpg),;
+   
+         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                           -webkit-image-set(url(../images/tablet/background/bg@2x.webp) 2x),;
+      }
+   
+      @include mq(retina3x) {
+         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                           url(../images/tablet/background/bg@3x.jpg),;
+   
+         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                           -webkit-image-set(url(../images/tablet/background/bg@3x.webp) 3x),;
+      }
+   }
+
+   /**
+   |============================
+   | Завантаження звичайного фонового зображення для десктопної версії
+   |============================
+*/
+   @include mq(desktop) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                        url(../images/desktop/background/bg.jpg),;
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      -webkit-image-set(url(../images/desktop/background/bg.webp) 1x)
+      ;
+
+      // Завантаження ретінізованого 2х фонового зображення
+      @include mq(retina2x) {
+         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                           url(../images/desktop/background/bg@2x.jpg),;
+
+         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                           -webkit-image-set(url(../images/desktop/background/bg@2x.webp) 2x),;
+      }
+
+      @include mq(retina3x) {
+         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                           url(../images/desktop/background/bg@3x.jpg),;
+
+         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                           -webkit-image-set(url(../images/desktop/background/bg@3x.webp) 3x),;
+      }
+   }
+}

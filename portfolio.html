@@ -18,35 +18,41 @@
    <header class="header">
       <section class="container header__container">
          <a class="logo header__logo" href="./index.html">Web<span class="logo__header-logo">Studio</span></a>
-   
+         
+      
          <nav class="nav">
             <ul class="list header__list">
-               <li class="nav__item"><a class="nav__link header__link" href="./index.html">Студия</a></li>
-               <li class="nav__item nav__item--active"><a class="nav__link header__link header__link--active" href="./portfolio.html">Портфолио</a></li>
-               <li class="nav__item"><a class="nav__link header__link" href="#">Контакты</a></li>
+               <li class="nav__item nav__item--active"><a class="header__link nav__link header__link--active" href="./index.html">Студия</a></li>
+               <li class="nav__item"><a class="header__link nav__link" href="./portfolio.html">Портфолио</a></li>
+               <li class="nav__item"><a class="header__link nav__link" href="#">Контакты</a></li>
             </ul>
          </nav>
-   
+      
          <div class="header-contacts">
-            <ul class="list header__list">
+            <ul class="list header__list header-contacts__list">
                <li class="header-contacts__item">
                   <a class="header__link" href="mailto:info@devstudio.com">
-                     <svg class="header-contacts__icon" width="16" height="12">
-                        <use href="./images/sprite.svg#icon-email"></use>
-                     </svg>
-                     info@devstudio.com
-                  </a>
+                        <svg class="header-contacts__icon" id="heder-mail-icon" width="14" height="10">
+                           <use href="./images/sprite.svg#icon-email"></use>
+                        </svg>
+                        info@devstudio.com
+                     </a>
                </li>
                <li class="header-contacts__item">
                   <a class="header__link" href="tel:+380961111111">
-                     <svg class="header-contacts__icon" width="10" height="16">
-                        <use href="./images/sprite.svg#icon-smartphone"></use>
-                     </svg>
-                     +38 096 111 11 11
-                  </a>
+                        <svg class="header-contacts__icon" id="heder-phone-icon" width="10" height="14">
+                           <use href="./images/sprite.svg#icon-smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                     </a>
                </li>
             </ul>
          </div>
+         <button class="burger-menu__open-btn js-open-menu btn" type="button">
+            <svg class="burger-menu__open-icon" width="40" height="40">
+               <use href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+         </button>
       </section>
    </header>
 
@@ -97,7 +103,7 @@
                               ./images/mobile/portfolio-example/project1/imgproject1_2x.jpg 2x,
                               ./images/mobile/portfolio-example/project1/imgproject1_3x.jpg 3x
                               " type="image/jpg" />
-                           <img class="team__foto" src="./images/mobile/portfolio-example/project1/imgproject1.jpg" width="450" height="294"
+                           <img class="portfolio-project__foto" src="./images/mobile/portfolio-example/project1/imgproject1.jpg" width="450" height="294"
                               alt="Проект Технокряк" loading="lazy" />
                         </picture>
 
@@ -148,7 +154,7 @@
                               ./images/mobile/portfolio-example/project2/imgproject2_2x.jpg 2x,
                               ./images/mobile/portfolio-example/project2/imgproject2_3x.jpg 3x
                               " type="image/jpg" />
-                           <img class="team__foto" src="./images/mobile/portfolio-example/project2/imgproject2.jpg" width="450" height="294"
+                           <img class="portfolio-project__foto" src="./images/mobile/portfolio-example/project2/imgproject2.jpg" width="450" height="294"
                               alt="Проект New Orlean vs Golden Star" loading="lazy" />
                         </picture>
 
@@ -198,7 +204,7 @@
                               ./images/mobile/portfolio-example/project3/imgproject3_2x.jpg 2x,
                               ./images/mobile/portfolio-example/project3/imgproject3_3x.jpg 3x
                               " type="image/jpg" />
-                           <img class="team__foto" src="./images/mobile/portfolio-example/project3/imgproject3.jpg" width="450" height="294"
+                           <img class="portfolio-project__foto" src="./images/mobile/portfolio-example/project3/imgproject3.jpg" width="450" height="294"
                               alt="Проект ресторану Seafood" loading="lazy" />
                         </picture>
 
@@ -248,7 +254,7 @@
                               ./images/mobile/portfolio-example/project4/imgproject4_2x.jpg 2x,
                               ./images/mobile/portfolio-example/project4/imgproject4_3x.jpg 3x
                               " type="image/jpg" />
-                           <img class="team__foto" src="./images/mobile/portfolio-example/project4/imgproject4.jpg" width="450" height="294"
+                           <img class="portfolio-project__foto" src="./images/mobile/portfolio-example/project4/imgproject4.jpg" width="450" height="294"
                               alt="Проект Prime" loading="lazy" />
                         </picture>
 
@@ -298,7 +304,7 @@
                               ./images/mobile/portfolio-example/project5/imgproject5_2x.jpg 2x,
                               ./images/mobile/portfolio-example/project5/imgproject5_3x.jpg 3x
                               " type="image/jpg" />
-                           <img class="team__foto" src="./images/mobile/portfolio-example/project5/imgproject5.jpg" width="450" height="294"
+                           <img class="portfolio-project__foto" src="./images/mobile/portfolio-example/project5/imgproject5.jpg" width="450" height="294"
                               alt="Проект Boxes" loading="lazy" />
                         </picture>
 
@@ -348,7 +354,7 @@
                               ./images/mobile/portfolio-example/project6/imgproject6_2x.jpg 2x,
                               ./images/mobile/portfolio-example/project6/imgproject6_3x.jpg 3x
                               " type="image/jpg" />
-                           <img class="team__foto" src="./images/mobile/portfolio-example/project6/imgproject6.jpg" width="450" height="294"
+                           <img class="portfolio-project__foto" src="./images/mobile/portfolio-example/project6/imgproject6.jpg" width="450" height="294"
                               alt="Проект Inspiration has no Borders" loading="lazy" />
                         </picture>
 
@@ -398,7 +404,7 @@
                               ./images/mobile/portfolio-example/project7/imgproject7_2x.jpg 2x,
                               ./images/mobile/portfolio-example/project7/imgproject7_3x.jpg 3x
                               " type="image/jpg" />
-                           <img class="team__foto" src="./images/mobile/portfolio-example/project7/imgproject7.jpg" width="450" height="294"
+                           <img class="portfolio-project__foto" src="./images/mobile/portfolio-example/project7/imgproject7.jpg" width="450" height="294"
                               alt="Проект Limited Edition" loading="lazy" />
                         </picture>
 
@@ -448,7 +454,7 @@
                               ./images/mobile/portfolio-example/project8/imgproject8_2x.jpg 2x,
                               ./images/mobile/portfolio-example/project8/imgproject8_3x.jpg 3x
                               " type="image/jpg" />
-                           <img class="team__foto" src="./images/mobile/portfolio-example/project8/imgproject8.jpg" width="450" height="294"
+                           <img class="portfolio-project__foto" src="./images/mobile/portfolio-example/project8/imgproject8.jpg" width="450" height="294"
                               alt="Проект LAB" loading="lazy" />
                         </picture>
 
@@ -498,7 +504,7 @@
                               ./images/mobile/portfolio-example/project9/imgproject9_2x.jpg 2x,
                               ./images/mobile/portfolio-example/project9/imgproject9_3x.jpg 3x
                               " type="image/jpg" />
-                           <img class="team__foto" src="./images/mobile/portfolio-example/project9/imgproject9.jpg" width="450" height="294"
+                           <img class="portfolio-project__foto" src="./images/mobile/portfolio-example/project9/imgproject9.jpg" width="450" height="294"
                               alt="Проект Growing Business" loading="lazy" />
                         </picture>
 
@@ -579,5 +585,57 @@
          </div>
       </section>
    </footer>
+
+   <section class="burger-menu">
+      <div class="burger-menu__backdrop">
+         <div class="burger-menu__wrapper js-menu-container">
+            <button class="burger-menu__close-btn js-close-menu btn">
+               <svg class="burger-menu__close-icon" width="40" height="40">
+                  <use href="./images/sprite.svg#icon-close"></use>
+               </svg>
+            </button>
+            <nav class="burger-menu__nav">
+               <ul class="list burger-menu__nav-list">
+                  <li class="burger-menu__nav-item burger-menu__nav-item--active"><a class="burger-menu__nav-link burger-menu__nav-link--active" href="./index.html">Студия</a></li>
+                  <li class="burger-menu__nav-item"><a class="burger-menu__nav-link" href="./portfolio.html">Портфолио</a></li>
+                  <li class="burger-menu__nav-item"><a class="burger-menu__nav-link" href="#">Контакты</a></li>
+               </ul>
+            </nav>
+            <div class="burger-menu__contact">
+               <ul class="list burger-menu__contact-list">
+                  <li class="burger-menu__contact-item">
+                     <a class="burger-menu__contact-phone" href="tel:+380961111111">
+                        +38 096 111 11 11
+                     </a>
+                  </li>
+
+                  <li class="burger-menu__contact-item">
+                     <a class="burger-menu__contact-email" href="mailto:info@devstudio.com">
+                        info@devstudio.com
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="burger-menu__social">
+               <ul class="list burger-menu__social-list">
+                  <li class="burger-menu__social-item">
+                     <a class="burger-menu__social-link" href="">Instagram</a>
+                  </li>
+                  <li class="burger-menu__social-item">
+                     <a class="burger-menu__social-link" href="">Twitter</a>
+                  </li>
+                  <li class="burger-menu__social-item">
+                     <a class="burger-menu__social-link" href="">Facebook</a>
+                  </li>
+                  <li class="burger-menu__social-item">
+                     <a class="burger-menu__social-link" href="">LinkedIn</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <script src="./js/burger-menu.js"></script>
 </body>
 </html>

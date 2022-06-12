@@ -1,10 +1,19 @@
 .hero {
-   background-color: var(--dark-background);
-   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/herobackgraund.png);
-   background-repeat: no-repeat;
-   background-position: center;
-   max-width: 1600рх;
-   padding: 200px 0;
+   margin: 0 auto;
+   padding: 118px 0;
+   width: 100vw;
+   @include mq (mobile) {
+      max-width: 480px;
+   }
+
+   @include mq (tablet) {
+   max-width: 768px;
+   }
+
+   @include mq (desktop) {
+      padding: 200px 0;
+      max-width: 1280px;
+   }
 
 }
 
@@ -12,22 +21,36 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
+
 }
 
 
 .hero__title {
-   font-weight: 900;
-   font-size: 44px;
-   line-height: 1.36;
    text-align: center;
+   font-weight: 900;
    letter-spacing: 0.06em;
    text-transform: uppercase;
-
    color: var(--white-theme);
-
-   width: 696px;
    margin: 0 auto;
    margin-bottom: 30px;
+
+
+   @include mq (mobile) {
+      width: 360px;
+
+
+      font-size: 26px;
+      line-height: 1.62;
+   }
+
+
+   @include mq (desktop) {
+      width: 696px;
+
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+   }
 }
 
 .hero__btn {
