@@ -2,17 +2,17 @@
    margin: 0 auto;
    padding: 118px 0;
    width: 100vw;
-   @include mq (mobile) {
-      max-width: 480px;
-   }
+   // @include mq (mobile) {
+   //    max-width: 480px;
+   // }
 
-   @include mq (tablet) {
-   max-width: 768px;
-   }
+   // @include mq (tablet) {
+   // max-width: 768px;
+   // }
 
    @include mq (desktop) {
       padding: 200px 0;
-      max-width: 1280px;
+      max-width: 1600px;
    }
 
 }

@@ -17,7 +17,8 @@
   --animations-link-shadow: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --animations-link-outline: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --animations-link-fill: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --animations-slow: 2500ms 250 ms ease-in-out;
+  --animations-link-opacity: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animations-slow: 1250ms 250ms ease-in-out;
 }
 
 h1,
@@ -101,7 +102,7 @@ body {
   padding-bottom: 60px;
 }
 
-@media screen and (max-width: 1279.98px) {
+@media screen and (min-width: 1280px) {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -318,7 +319,8 @@ body {
 }
 
 .modal-form__checkbox-input {
-  opacity: 0;
+  visibility: hidden;
+  width: 0;
 }
 
 .checkbox-custom {
@@ -370,6 +372,13 @@ body {
   color: var(--main-text-theme-paragraph);
 }
 
+@media screen and (max-width: 1279.98px) {
+  .modal-form__subscribe-text {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
 .modal-form__subscribe-text--hiperlink {
   font-size: 14px;
   line-height: 1.71;
@@ -377,6 +386,13 @@ body {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: var(--hiperlink-and-active-theme);
+}
+
+@media screen and (max-width: 1279.98px) {
+  .modal-form__subscribe-text--hiperlink {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .modal-form__submit-btn {
@@ -486,12 +502,28 @@ body {
   pointer-events: none;
   top: 0;
   left: 0;
+  -webkit-transform: translateY(-100vw);
+      -ms-transform: translateY(-100vw);
+          transform: translateY(-100vw);
+  -webkit-transition: var(--animations-link-opacity), -webkit-transform var(--animations-slow);
+  transition: var(--animations-link-opacity), -webkit-transform var(--animations-slow);
+  -o-transition: var(--animations-link-opacity), transform var(--animations-slow);
+  transition: var(--animations-link-opacity), transform var(--animations-slow);
+  transition: var(--animations-link-opacity), transform var(--animations-slow), -webkit-transform var(--animations-slow);
 }
 
 .burger-menu.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: var(--animations-link-opacity), -webkit-transform var(--animations-slow);
+  transition: var(--animations-link-opacity), -webkit-transform var(--animations-slow);
+  -o-transition: var(--animations-link-opacity), transform var(--animations-slow);
+  transition: var(--animations-link-opacity), transform var(--animations-slow);
+  transition: var(--animations-link-opacity), transform var(--animations-slow), -webkit-transform var(--animations-slow);
 }
 
 @media screen and (min-width: 768px) {
@@ -560,23 +592,7 @@ body {
   color: var(--main-text-theme-accent);
 }
 
-.burger-menu__nav-link--active {
-  color: var(--hiperlink-and-active-theme);
-}
-
-.burger-menu__nav-link--active::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  color: var(--hiperlink-and-active-theme);
-  background-color: var(--hiperlink-and-active-theme);
-}
-
-.burger-menu__nav-link:hover, .burger-menu__nav-link:focus {
+.burger-menu__nav-link--active, .burger-menu__nav-link:hover, .burger-menu__nav-link:focus {
   color: var(--hiperlink-and-active-theme);
 }
 
@@ -951,22 +967,10 @@ body.menu-open {
   width: 100vw;
 }
 
-@media screen and (min-width: 480px) {
-  .hero {
-    max-width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero {
-    max-width: 768px;
-  }
-}
-
 @media screen and (min-width: 1280px) {
   .hero {
     padding: 200px 0;
-    max-width: 1280px;
+    max-width: 1600px;
   }
 }
 
