@@ -28,6 +28,10 @@
 .header__logo {
    padding: 24px 0;
    margin-right: 93px;
+
+   @include mq (min-mobile) {
+      margin: 0;
+   }
 }
 
 .header {

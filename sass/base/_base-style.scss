@@ -11,9 +11,10 @@
    margin: 0 auto;
    padding: 0 15px;
    width: 100vw;
+   position: relative;
 
-   @media screen and (max-width: 479px) {
-      width: 100%;
+   @include mq (min-mobile) {
+      width: 100vw;
    }
 
    @include mq (mobile) {
@@ -41,3 +42,9 @@
       padding-bottom: 94px;
    }
 }
+
+// * {
+//    @media screen and (max-width: 480px) {
+//    width: 100vw;      
+//    }
+// }

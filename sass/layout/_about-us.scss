@@ -29,6 +29,15 @@
 }
 
 .about-company__item {
+
+   @include mq (min-mobile) {
+      width: calc(100vw - 30px);
+
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+   }
+
    @include mq (mobile) {
       width: 450px;
       margin-bottom: 30px;

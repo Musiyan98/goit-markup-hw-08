@@ -21,6 +21,15 @@
       }
    }
 
+   @include mq (min-mobile) {
+      width: calc(100vw - 30px);
+
+      &:not(:last-child) {
+         margin-bottom: 30px;
+         margin-right: 0;
+      }
+   }
+
    @include mq (tablet-only) {
       &:not(:nth-child(3n)) {
          margin-right: 30px;

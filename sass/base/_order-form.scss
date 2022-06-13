@@ -19,11 +19,12 @@
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 528px;
    background-color: #fff;
    border-radius: 4px;
    padding: 40px;
    transition: transform 450ms ease-in-out 300ms, opacity 450ms ease-in-out 300ms;
+   width: 100vw;
+   max-width: 450px;
 
    .backdrop.is-hidden & {
       transform: translate(-50%, -50%) scale(0.4);
@@ -34,6 +35,10 @@
       transform: translate(-50%, -50%) scale(1);
       opacity: 1;
    };
+
+   @include mq (desktop) {
+      width: 528px;
+   }
 }
 
 .modal-btn {
